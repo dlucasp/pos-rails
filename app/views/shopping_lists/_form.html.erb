@@ -1,0 +1,36 @@
+<%= form_for @shopping_list do |f| %>
+ 
+  <% if @shopping_list.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@shopping_list.errors.count, "error") %> prohibited
+        this list from being saved:
+      </h2>
+      <ul>
+        <% @shopping_list.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :Lista %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :Descrição %><br>
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= f.label :Comprado? %>
+    <%= f.check_box :purchased %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

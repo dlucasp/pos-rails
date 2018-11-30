@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping List</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Home', root_path %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Nova Lista', new_shopping_list_path %></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <%= yield %>
+
+</body>
+</html>

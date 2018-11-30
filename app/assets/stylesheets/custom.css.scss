@@ -1,0 +1,43 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html, body {
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.list-counter {
+    margin-bottom: 45px;
+}
+
+.list-container {
+    border-radius: 7px;
+    background-color: #e8ecdb;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    
+    p {
+        margin-left: 25px;
+    }    
+    
+    .nav-tabs > li > a:hover {
+        background-color: #b1c4af;
+        color: #f1f7f7;
+    }
+}
+
+.hidden-form {
+    display: none;
+}
+
+.list-description {
+    font-style: oblique;
+}
+
+.add-product-button {
+    margin-left: 75px;
+}
